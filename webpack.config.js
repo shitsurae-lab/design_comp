@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, './dist'), //絶対パス。第一引数(__dirname)で現在のフォルダ階層を示す
-    filename: 'js/main.js', //出力されるjsの名称変更。先頭に'./'などはつけない
+    filename: 'js/main.js', //出力されるjsの名称変更。__dirnameの後ろのため、先頭に'./'とはつけない
   },
   module: {
     rules: [

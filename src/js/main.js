@@ -1,6 +1,6 @@
-import my from './modules/my.js';
+import my from './my.js';
 my();
 console.log('webpack 1st Test!');
 
 //CSSの読み込み
-import './modules/my.css';
+import '../css/style.css';
