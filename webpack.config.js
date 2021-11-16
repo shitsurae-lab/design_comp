@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'), //絶対パス。第一引数(__dirname)で現在のフォルダ階層を示す
-    filename: 'main.js', //出力されるjsの名称変更
+    filename: 'js/main.js', //出力されるjsの名称変更。先頭に'./'などはつけない
   },
   module: {
     rules: [
@@ -25,7 +25,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: './css/style.css',
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html', //templateの内容を親にしてjsやCSSが読み込まれる
     }),
