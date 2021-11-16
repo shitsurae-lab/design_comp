@@ -29,7 +29,7 @@ module.exports = {
       filename: './css/style.css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html', //templateの内容を親にしてjsやCSSが読み込まれる
+      template: './src/templates/index.html', //templateの内容を親にしてjsやCSSが読み込まれる
     }),
     new CleanWebpackPlugin(),
   ],
