@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { loader } = require('mini-css-extract-plugin');
+// production モード以外の場合、変数 enabledSourceMap は true
+const enabledSourceMap = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: './src/js/main.js',
@@ -13,13 +15,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/,
+        test: /\.scss/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
+            options: {
+              url: false,
+              //  production モードでなければソースマップを有効に
+              sourceMap: enabledSourceMap,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                fiber: require('fibers'),
+              },
+              //  production モードでなければソースマップを有効に
+              sourceMap: enabledSourceMap,
+            },
           },
         ],
       },
@@ -74,4 +92,6 @@ module.exports = {
 
     new CleanWebpackPlugin(),
   ],
+  //source-map タイプのソースマップを出力
+  devtool: 'source-map',
 };
