@@ -94,4 +94,8 @@ module.exports = {
   ],
   //source-map タイプのソースマップを出力
   devtool: 'source-map',
+  // node_modules を監視（watch）対象から除外
+  watchOptions: {
+    ignored: /node_modules/, //正規表現で指定
+  },
 };
