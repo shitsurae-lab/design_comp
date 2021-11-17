@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/shitsurae-lab/design_comp#readme",
   "devDependencies": {
-    "bootstrap": "^5.1.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "fibers": "^5.0.0",
