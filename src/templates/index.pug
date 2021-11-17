@@ -1,0 +1,14 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Build by webpack and Pug
+  body
+    include _menu.pug
+    h1 Hello World! , Pug
+    p 画像たち
+    .content: .p-flex.p-between
+      figure: img(src="../images/yuriy-bogdanov-W51VK3Obcj0-unsplash.jpg")
+      figure: img(src="../images/jenelle-_6YXOv-l7AI-unsplash.jpg")

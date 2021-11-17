@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { loader } = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/js/main.js',
@@ -27,7 +28,7 @@ module.exports = {
         //webpack5ではfile-loaderやurl-loaderを使わないでも'type:','generator:'の記述で画像が正しく表現できる
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]', //options: とは異なり'.[ext]'とは記述しない
+          filename: 'images/[name][ext]', //options: とは異なり'.[ext]'とは記述しない
         },
         use: [
           // {
@@ -41,6 +42,20 @@ module.exports = {
           // },
         ],
       },
+      {
+        test: /\.pug/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: true,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -48,8 +63,15 @@ module.exports = {
       filename: './css/style.css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/templates/index.html', //templateの内容を親にしてjsやCSSが読み込まれる
+      template: './src/templates/index.pug', //①templateの内容を親にしてjsやCSSが読み込まれる
+      //②templateの内容をHTMLから.pugに変更した
+      filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/access.pug',
+      filename: 'access.html',
+    }),
+
     new CleanWebpackPlugin(),
   ],
 };

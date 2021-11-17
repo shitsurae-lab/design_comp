@@ -20,7 +20,15 @@ body {
 
 .p-flex {
   display: flex;
+}
+
+.p-between {
   justify-content: space-between;
-  gap: 20px;
+}
+
+.p-start {
+  justify-content: flex-start;
+  list-style-type: none;
+  column-gap: 32px;
 }
 
