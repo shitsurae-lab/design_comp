@@ -22,6 +22,25 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpg|png)$/,
+        //webpack5ではfile-loaderやurl-loaderを使わないでも'type:','generator:'の記述で画像が正しく表現できる
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]', //options: とは異なり'.[ext]'とは記述しない
+        },
+        use: [
+          // {
+          //   loader: 'file-loader',
+          //   //option's'の表記
+          //   options: {
+          //     //'esModules'ではない
+          //     esModule: false,
+          //     name: 'images/[name].[ext]', //ランダムな文字列にならないよう、nameを指定する
+          //   },
+          // },
+        ],
+      },
     ],
   },
   plugins: [

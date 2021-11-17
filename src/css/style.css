@@ -1,3 +1,22 @@
 body {
   color: royalblue;
+  box-sizing: border-box;
+}
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.p-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
