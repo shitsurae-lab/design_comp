@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
+    "start": "webpack server --mode=development",
     "watch": "webpack --mode development --watch"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "fibers": "^5.0.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.0.1",
     "mini-css-extract-plugin": "^2.4.4",
     "pug-html-loader": "^1.1.5",
     "sass": "^1.43.4",
