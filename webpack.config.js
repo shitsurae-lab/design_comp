@@ -111,7 +111,7 @@ module.exports = {
 
     new CleanWebpackPlugin(),
   ],
-  //source-map タイプのソースマップを出力
+  //JavaScriptのソースマップを出力
   devtool: 'source-map',
   // node_modules を監視（watch）対象から除外
   watchOptions: {
