@@ -75,7 +75,9 @@ module.exports = {
           //   options: {
           //     //'esModules'ではない
           //     esModule: false,
-          //     name: 'images/[name].[ext]', //ランダムな文字列にならないよう、nameを指定する
+          //     name: 'images/[name].[ext]',
+          //ランダムな文字列にならないよう、nameを指定する
+          //     publicPath: '/',
           //   },
           // },
           {
@@ -118,6 +120,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/access.pug',
       filename: 'access.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/members/member01.pug',
+      filename: 'members/member01.html',
     }),
 
     new CleanWebpackPlugin(),
