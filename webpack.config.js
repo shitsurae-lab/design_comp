@@ -15,7 +15,26 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss/,
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    targets: '>0.25%, not dead', //'ブラウザの対象を限定している'
+                  },
+                ],
+              ],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(css|scss|sass)$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,

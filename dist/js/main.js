@@ -2,18 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/css/style.scss":
-/*!****************************!*\
-  !*** ./src/css/style.scss ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/js/my.js":
 /*!**********************!*\
   !*** ./src/js/my.js ***!
@@ -24,9 +12,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   console.log('こちらはmodules内のmy.js');
 });
+
+/***/ }),
+
+/***/ "./src/css/style.scss":
+/*!****************************!*\
+  !*** ./src/css/style.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
 
 /***/ })
@@ -98,9 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
 
 (0,_my_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-console.log('webpack 1st Test!');
-
-//CSSの読み込み
+console.log('webpack 1st Test!'); //CSSの読み込み
 
 
 })();
