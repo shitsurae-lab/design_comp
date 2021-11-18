@@ -53,7 +53,7 @@ module.exports = {
             options: {
               implementation: require('sass'),
               sassOptions: {
-                fiber: require('fibers'),
+                fiber: false,
               },
               //  production モードでなければソースマップを有効に
               sourceMap: enabledSourceMap,
