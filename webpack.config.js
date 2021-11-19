@@ -110,7 +110,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './css/[name]-[contenthash].css',
+      filename: './css/style-[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/index.pug', //①templateの内容を親にしてjsやCSSが読み込まれる
