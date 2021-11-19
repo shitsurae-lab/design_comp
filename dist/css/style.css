@@ -33,4 +33,9 @@ body {
   column-gap: 32px;
 }
 
+.p-mv {
+  padding-top: 50%;
+  background-image: url(../images/jenelle-_6YXOv-l7AI-unsplash.jpg);
+}
+
 /*# sourceMappingURL=style.css.map*/
