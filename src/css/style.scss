@@ -1,6 +1,12 @@
+@use 'bootstrap' as *;
+
 body {
   color: royalblue;
   box-sizing: border-box;
+}
+
+h1 {
+  color: $primary;
 }
 .content {
   max-width: 960px;
