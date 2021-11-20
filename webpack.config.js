@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'), //絶対パス。第一引数(__dirname)で現在のフォルダ階層を示す
     filename: 'js/[name]-[contenthash].js', //出力されるjsの名称変更。__dirnameの後ろのため、先頭に'./'とはつけない
-    publicPath: '/',
+    publicPath: '/', //backgound-imageなどCSSから画像を出力する際に正しくパスが出力されるよう"publicPath"を表記する
   },
   module: {
     rules: [
