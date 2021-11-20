@@ -67,7 +67,7 @@ module.exports = {
         //webpack5ではfile-loaderやurl-loaderを使わないでも'type:','generator:'の記述で画像が正しく表現できる
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]', //options: とは異なり'.[ext]'とは記述しない
+          filename: 'images/[name]-[contenthash][ext]', //options: とは異なり'.[ext]'とは記述しない
         },
         use: [
           // {
