@@ -38,4 +38,17 @@ h1 {
 .p-mv {
   padding-top: 50%;
   background-image: url('../images/jenelle-_6YXOv-l7AI-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.p-mv__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
 }
