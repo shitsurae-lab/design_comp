@@ -3091,22 +3091,6 @@ function within(min, value, max) {
 
 /***/ }),
 
-/***/ "./src/js/my.js":
-/*!**********************!*\
-  !*** ./src/js/my.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
-  console.log('こちらはmodules内のmy.js');
-});
-
-/***/ }),
-
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -8143,6 +8127,23 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./src/js/my.js":
+/*!**********************!*\
+  !*** ./src/js/my.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  console.log('こちらはmodules内のmy.js');
+});
+
+
 /***/ })
 
 /******/ 	});
@@ -8211,15 +8212,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _my_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./my.js */ "./src/js/my.js");
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
 //Bootstrapを読み込み
-var bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+const bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
 
 (0,_my_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-console.log('webpack 1st Test!'); //CSSの読み込み
+console.log('webpack 1st Test!');
+
+//CSSの読み込み
 
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main-c680801a70d5e22b6ee2.js.map
+//# sourceMappingURL=main-8d6a47a5986f917a2adc.js.map
